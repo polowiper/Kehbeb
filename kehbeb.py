@@ -1,15 +1,24 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
 import asyncio
+import random
+import os
+intents = discord.Intents.all()
+bote = discord.Client(intents=intents)
+tree = app_commands.CommandTree(bote)
 
-intents = discord.Intents.default()
-intents.members = True
-intents.message_content = True
-intents.messages = True
 
+@tree.command(name = "randomkehbeb", description="envoie une image de kehbeb aléatoire")
+async def randomkehbeb(interaction):
+    fchoice = random.choice(os.listdir('kehbeb/'))
+    fchoice = f"{os.getcwd()}/kehbeb/{fchoice}"
+    file = discord.File(f"{fchoice}", filename="kehbeb.jpg")
+    await interaction.response.send_message(file=file)
 
-bote = commands.Bot(command_prefix='!', selfbot = False, intents=intents)
-
+@bote.event
+async def on_ready():
+    await tree.sync()
 @bote.event
 async def on_message(msg):
     num = 0
