@@ -1,0 +1,104 @@
+{
+    "jvc": {
+        "id": 1,
+        "info": "Le kebab originel mgl",
+        "location": "41 rue de Clignancourt - 18e",
+        "chef": "L'autre fils de pute de Didi"
+    },
+    "oasis frez": {
+        "id": 2,
+        "info": "La c lclasico kebab oasis frez",
+        "location": "64bis rue du Ruisseau - 18e",
+        "chef": "Mon pote Didier"
+    },
+    "kebab royal": {
+        "id": 3,
+        "info": "Le kebab qui fait la royaute de la rue",
+        "location": "12 avenue des Champs-Elysees - 8e",
+        "chef": "Le roi du kebab"
+    },
+    "kebab de la mif": {
+        "id": 4,
+        "info": "Le kebab des vrais de vrais",
+        "location": "2 rue de Belleville - 20e",
+        "chef": "Le cousin de Mohamed"
+    },
+    "kebab veggie": {
+        "id": 5,
+        "info": "Pour les amateurs de kebab sans viande",
+        "location": "18 rue de la Salade - 9e",
+        "chef": "Le gars aux legumes"
+    },
+    "kebab du pharaon": {
+        "id": 6,
+        "info": "Le kebab digne des pharaons",
+        "location": "7 avenue des Pyramides - 1er",
+        "chef": "Le pharaon cuisinier"
+    },
+    "kebab du coin": {
+        "id": 7,
+        "info": "Le kebab du coin de la rue",
+        "location": "3 rue des Petits Champs - 2e",
+        "chef": "Le gars du quartier"
+    },
+    "kebab en folie": {
+        "id": 8,
+        "info": "Le kebab qui rend fou",
+        "location": "9 rue de la Folie-Mericourt - 11e",
+        "chef": "Le chef fou"
+    },
+    "kebab gourmet": {
+        "id": 9,
+        "info": "Le kebab pour les palais exigeants",
+        "location": "22 avenue Montaigne - 8e",
+        "chef": "Le gourmet du kebab"
+    },
+    "kebab du terroir": {
+        "id": 10,
+        "info": "Le kebab traditionnel du terroir",
+        "location": "5 rue de la Ferme - 14e",
+        "chef": "Le terroiriste"
+    },
+    "kebab sucre-sale": {
+        "id": 11,
+        "info": "Le kebab qui melange sucre et sale",
+        "location": "31 rue du Sucre - 16e",
+        "chef": "Le maitre des saveurs"
+    },
+    "kebab epice": {
+        "id": 12,
+        "info": "Le kebab pour les amateurs de piquant",
+        "location": "14 rue des Epices - 10e",
+        "chef": "Le roi du piment"
+    },
+    "kebab du monde": {
+        "id": 13,
+        "info": "Le kebab aux saveurs du monde",
+        "location": "88 avenue du Monde - 15e",
+        "chef": "Le globe-trotter cuisinier"
+    },
+    "kebab du matin": {
+        "id": 14,
+        "info": "Le kebab pour le petit-dejeuner",
+        "location": "6 rue du Matin - 19e",
+        "chef": "Le leve-tot"
+    },
+    "kebab exotique": {
+        "id": 15,
+        "info": "Le kebab aux saveurs exotiques",
+        "location": "10 rue de l'Exotisme - 13e",
+        "chef": "L'aventurier de la cuisine"
+    },
+    "kebab de la mer": {
+        "id": 16,
+        "info": "Le kebab aux fruits de mer",
+        "location": "15 rue de la Mer - 7e",
+        "chef": "Le capitaine des saveurs marines"
+    },
+    "kebab mysterieux": {
+        "id": 17,
+        "info": "Le kebab qui garde ses secrets",
+        "location": "20 rue du Mystere - 5e",
+        "chef": "Le mysterieux cuisinier"
+    }
+}
