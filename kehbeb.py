@@ -3,7 +3,9 @@ from discord import app_commands
 from discord.ext import commands
 import asyncio
 import random
+import urllib
 import os
+import json
 intents = discord.Intents.all()
 bote = discord.Client(intents=intents)
 tree = app_commands.CommandTree(bote)
@@ -15,6 +17,37 @@ async def randomkehbeb(interaction):
     fchoice = f"{os.getcwd()}/kehbeb/{fchoice}"
     file = discord.File(f"{fchoice}", filename="kehbeb.jpg")
     await interaction.response.send_message(file=file)
+
+@tree.command(name = "kehbebinfo", description="donne des infos sur un kehbeb en particulier")
+async def kehbebinfo(interaction, kehbebe: int = 0):
+    droprate = round((1/len(os.listdir(r"kehbeb\\"))), 4)
+    with open('kehbebs.json') as e: 
+        kehbebs = json.load(e)
+        message = list(kehbebs.keys())
+    polo = bote.get_user(823143840813809666)
+    if kehbebe == 0:
+        embed = discord.Embed(title="Tou lé kehbeb mgl", colour=discord.Colour.random())
+        embed.set_author(name = "Polo", url="https://github.com/polowiper", icon_url=(polo.avatar.url))
+        for i in message:
+            embed.add_field(name=i, value=(f"Numéro : {kehbebs[i]['id']}"))
+        await interaction.response.send_message(embed=embed)
+    if kehbebe > len(os.listdir('kehbeb/')):
+        await interaction.response.send_message("Mgl lui il éxist pa")
+    else:
+        embed = discord.Embed(title=message[kehbebe-1], colour=discord.Colour.random(), 
+        description=(f"""{kehbebs[message[kehbebe-1]]['info']}
+Chef : {kehbebs[message[kehbebe-1]]['chef']}
+Adresse : {kehbebs[message[kehbebe-1]]['location']}
+Rareté : {round((droprate * 100), 2)}%
+
+Kebeb N°{kehbebs[message[kehbebe-1]]['id']}
+
+        """))
+        file = discord.File(f"kehbeb\\kehbeb{kehbebe}.jpg", filename="kehbeb.jpg")
+        embed.set_image(url=f"attachment://kehbeb.jpg")
+        embed.set_author(name= "Polo", url="https://github.com/polowiper", icon_url=(polo.avatar.url))
+        await interaction.response.send_message(file=file, embed=embed)
+    
 
 @bote.event
 async def on_ready():
@@ -79,4 +112,4 @@ async def on_message(msg):
             bo += " kehbeb chef pfiouuuu sa fé beaucoup"
             await msg.channel.send(bo)
 
-bote.run(BOT TOKEN)
+bote.run("")
